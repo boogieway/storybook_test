@@ -1,6 +1,7 @@
 name: CI workflow
 
-on: push
+on:
+  push:
 
 jobs:
   test:
@@ -19,7 +20,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Instal dependencies
+      - name: Install dependencies
         run: npm install
 
       - name: Run the tests
